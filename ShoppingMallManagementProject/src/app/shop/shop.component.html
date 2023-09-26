@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card mt-5">
+        <h1>Shop</h1>
+    </div>
+</div>
+
+
+<div class="card mt-5" style="padding: 20px;">
+    <form #registerShops="ngForm" (ngSubmit)="shops(registerShops)">
+        <div class="form-group">
+            <label for="name">Name</label> <br><input type="text" #name (ngModel)="name" name="name" id="name"
+                class="form-control" placeholder="shopName"><br>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category" placeholder="category" class="form-select" #category (ngModel) = "category" aria-selected="a">
+                <option *ngFor="let i of category1" [value]="i.viewvalue">
+                    {{ i.viewvalue}}
+                </option>
+
+            </select>
+            <br>
+        </div>
+
+        <!-- <select  name="category" id="category" #category (ngModel) = "category" class="form-select" aria-label="Default select example" >
+            <option value="Wholesale">Wholesale</option>
+            <option value="Commercial">Comercial</option>
+        </select><br><input type="text" #category (ngModel)="category" name="category" id="category"
+          class="form-control" placeholder="shopcategory"> -->
+
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" aria-placeholder="status" class="form-select" #status1 (ngModel)="status1">
+                <option *ngFor="let i of status" [value]="i.viewvalue">
+                    {{ i.viewvalue}}
+                </option>
+
+            </select>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="floor">Floor</label> <br><input type="number" #floor (ngModel)="floor" name="floor" id="floor"
+                class="form-control" placeholder="shopfloor"><br>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-success w-100">
+        </div>
+    </form>

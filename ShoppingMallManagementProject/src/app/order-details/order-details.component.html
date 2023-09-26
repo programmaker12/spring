@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card mt-5">
+      <h1>OrderDetails</h1>
+    </div>
+  </div>
+  
+  
+  <div class="card mt-5" style="padding: 20px;">
+    <form #orderForm="ngForm" (ngSubmit)="order(orderForm)">
+      <div class="form-group">
+        <label for="price">Price</label> <br><input type="number" #price (ngModel)="price" name="price" id="price"
+          class="form-control" placeholder="orderprice"><br>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label> <br><input type="text" #name (ngModel)="name" name="name" id="name"
+          class="form-control" placeholder="employeename"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="quantity">Quantity</label> <br><input type="number" #quantity (ngModel)="quantity" name="quantity" id="quantity"
+          class="form-control" placeholder="orderquantity"><br>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-success w-100">
+      </div>
+    </form>

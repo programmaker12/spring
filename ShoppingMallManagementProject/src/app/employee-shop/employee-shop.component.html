@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card mt-5">
+      <h1>Customer</h1>
+    </div>
+  </div>
+  
+  
+  <div class="card mt-5" style="padding: 20px;">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+       <div class="form-group">
+        <label for="shop_number">Shop Number</label> <br><input type="number" #shop_number (ngModel)="shop_number" name="shop_number" id="email"
+          class="form-control" placeholder="shop number"><br>
+      </div> -->
+
+       <div class="form-group">
+        <label for="shopname">Shop Name</label> <br><input type="text" #shopname (ngModel)="shopname" name="shopname" id="shopname"
+          class="form-control" placeholder="shop name"><br>
+      </div>
+      
+
+      <div class="form-group">
+        <label for="shopcategory">ShopCategory</label> <br><input type="text" #shopcategory (ngModel)="shopcategory" name="shopcategory" id="shopcategory"
+          class="form-control" placeholder="shop category"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="shopstatus">shopstatus</label> <br><input type="text" #shopstatus (ngModel)="shopstatus" name="shopstatus" id="shopstatus"
+          class="form-control" placeholder="shop status"><br>
+      </div> -->
+      
+      
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-success w-100">
+      </div>
+    </form> 
